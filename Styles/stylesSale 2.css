@@ -25,7 +25,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #9B1C31;
+    background-color: gold;
     height: 100px;
 }
 nav #icon-burger{
