@@ -11,51 +11,42 @@ p{
     align-content: left;
     color: whitesmoke;
     padding: 50px;
-    height: 650px;
     width: auto;
     background-image: url(/Images/1.Homepage/MainPhoto.jpg);
-    /* background: red; */
     background-size: 10%;
     background-repeat: no-repeat;
-    /* background-attachment: fixed;   */
     background-size: cover;
     line-height: 40px;
 	overflow:auto;
-	/* font-size: large; */
-    
+    margin-top: 5%;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+    border-radius: 10px;
 }
 
-.description h2{
-    font-size: 1.1rem;
+.description h1 p{
     line-height: 20px;
-    /* padding-top: 100x;
-    padding-bottom: 10px; */
     padding: 30px 0 30px 0;
+    margin-left: 40%;
+    margin-right: 40%;
 }
-
-.description p{
-    line-height: 25px;
-}
-
 #Logocenter img {
-    width: 20%;
+    width: 200px;  
 }
-.List ol{
-    margin: 10px 0;
-}
-.List ol li{
-    margin-left: 30px;
+
+.List li{
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .small-container{
     max-width: auto;
-    margin: auto;
-    /* padding: 0px; */
+    margin: 0 20px;
     line-height: 25px;
     padding-bottom: 5%;
-    /* display: flex;
-    flex-direction: column; */
-
+}
+.small-container p{
+    line-height: 35px;
 }
 .small-container img{
 	width: 100%; 
@@ -83,28 +74,25 @@ h1,h2{
 }
 .col-1{
     flex-basis: 25%;
+    flex-direction: row;
+    justify-content: space-around;
     padding: 10px;
     min-width: 200px;
     margin-bottom: 50px;
-    
-	
 }
 .col-1 img{
     width: 100%;
 }
-
 .col-1 h4{
 	text-align: center;
 }
-
-.col-1 a img:hover {
+.col-1 a:hover {
     transform: scale(1.05,1.05);
     transition-duration: 0.4s;
 }
-
-
-
-
+.col-1 button{
+    width: 100%; 
+}
 
 .MaGT{
     display: flex;
@@ -112,7 +100,6 @@ h1,h2{
     position: relative;
     margin-top: 50px;
     height: 500px;
-    /* overflow: hidden; */
 }
 
 .MaGT::before{
@@ -136,6 +123,8 @@ h1,h2{
     color: black;
     background: rgba(255,255,255,0.5);
     border-radius: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 .MaGT .text-block{
     top: 50%;
@@ -144,7 +133,7 @@ h1,h2{
 
 @media (max-width: 500px){
     .MaGT{
-        height: 400px;
+        height: 500px;
     }
     .MaGT h2{
         font-size: 16px;
@@ -156,8 +145,9 @@ h1,h2{
         padding: 10px !important;
     }
     .button{
-        font-size: 5px;
+        font-size: 10px !important;
     }
+    
 
 }
 .button{
@@ -175,40 +165,13 @@ h1,h2{
 .button:hover{
     background-color:rgb(95, 161, 8);
 }
-
 .climate{
     border: 4px solid navy !important;
+    padding: 1%; 
 }
-
 .medical{
     background-color:bisque;
 }
-
-
-/* .IMGOverwrite{
-	position: relative;
-	text-align: center;
-	
-    border: 100%;
-	size: 100;
-} */
-/* .centered {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-  }
-.centered img{
-	width: 50%;
-} */
-
-/* .Left-Overwrite{
-    position: absolute;
-    top: 50%;
-    left: 16%;
-    transform: -50%, -50%;
-    
-} */
 
 
 

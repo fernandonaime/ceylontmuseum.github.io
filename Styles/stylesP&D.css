@@ -2,7 +2,7 @@
 
 .small-container{
     max-width: auto;
-    margin: auto;
+    margin: 0 20px;
     line-height: 25px;
 }
 .small-container img{

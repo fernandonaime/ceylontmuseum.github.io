@@ -12,9 +12,10 @@ a:hover{
 	font-family: "My Font Name";
 	src: url("assets/myfontname.ttf") format("truetype");
   }
-#pageContent{
+/* #pageContent{
 	margin: 0 50px;
-}
+    margin: 0px;
+} */
 
 /* -----------------------------------------------------------------------------------------------NAVBAR- */
 
@@ -76,7 +77,7 @@ nav ul li a{
   
 .dropdown-content {
     display: none;
-    position:fixed !important ;
+    position:fixed  ;
     background-color:rgb(69, 119, 4);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
