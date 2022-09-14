@@ -8,6 +8,10 @@ a:hover{
     transition-duration:0.4s ;
     transform: scale(1.1,1.1);
 }
+body {
+	padding: 0;
+	background-image:url("/Images/Background.webp")  ;
+}
 
 
 /* -----------------------------------------------------------------------------------------------NAVBAR- */
