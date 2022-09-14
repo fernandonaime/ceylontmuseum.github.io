@@ -165,46 +165,16 @@ nav ul li a{
 #pageContent{
 	margin: 0 50px;
 }
-/* h1{
-    font-size: 1vw ;
-} */
-
-/* .description{
-
-    align-content: left;
-    color: whitesmoke;
-    padding: 50px;
-    height: 650px;
-    width: auto;
-    background-image: url("images/MainPhotoTS2.webp");
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-    background-size: cover;
-    line-height: 40px;
-	overflow: scroll;
-	font-size: large;
-}
-.description h1{
-    align-items: center;
-} */
-
 .Mainphoto{
     position: relative;
     width: 100%;
-    /* margin: 0 auto; */
-
 }
 .Mainphoto img{
     width: 100%;
     filter: blur(1px);
-    /* filter: grayscale(10); */
-    /* filter: brightness(12); */
     box-shadow: 0px 16px 32px 0px rgba(155,28,49,0.5);
 }
-
 .Mainphoto h1{
-    /* background-color: #a5a9b1; */
     position: absolute;
     top: 50%;
     background: rgb(255,215,0);
@@ -216,20 +186,14 @@ nav ul li a{
 
 @media screen and (max-width:700px){
     .Mainphoto img{
-        display:fle;
-        
+        display:flex;
         width:80vw;
-    }
-    
+    }   
 }
-    
-
 .cate{
     background: rgba(155,28,49,0.7);
     border-radius: 10px;
 }
-
-
 .small-container{
     max-width: auto;
     margin: auto;
