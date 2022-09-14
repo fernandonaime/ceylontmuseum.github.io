@@ -1,0 +1,359 @@
+*{
+    font-family:'Times New Roman', Times, serif;
+	margin: 0;
+	padding: 0;	
+    /* box-sizing: border-box; */
+}
+a:hover{
+    transition-duration:0.4s ;
+    transform: scale(1.1,1.1);
+}
+@font-face {
+	font-family: "My Font Name";
+	src: url("assets/myfontname.ttf") format("truetype");
+  }
+#pageContent{
+	margin: 0 50px;
+}
+
+/* -----------------------------------------------------------------------------------------------NAVBAR- */
+
+#navbar{
+    width: 100%;
+    height: auto;
+    font-family:'Courier New', Courier, monospace;
+}
+nav{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(95, 161, 8);
+    height: 100px;
+}
+nav #icon-burger{
+    display: none;
+}
+nav ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    font-size: 17px;
+    padding: 0 20px;
+}
+.mb-logo{
+    display: none;
+}
+.logo img{
+    height: 70px;
+    padding: 5px 10px;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+.dropdown .dropbtn {
+    font-size: 17px;  
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgb(69, 119, 4);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+
+}
+  
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown-content a:hover {
+    /* background-color: #ddd; */
+    background: #ddd;
+    border-radius: 4px;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.icon-burger{
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    z-index: 101;
+    cursor: pointer;
+}
+
+.icon-burger span{
+    width: 25px;
+    height: 4px;
+    border-radius: 999px;
+    background-color: black;
+    transition: all 0.3s ease;
+}
+@media (max-width: 768px){
+    .mb-logo{
+        display: block;
+    }
+    .cmp-logo{
+        display: none;
+    }
+    nav ul{
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav ul img{
+        position: absolute;
+        top: -20px;
+    }
+    nav ul li a{
+        padding: 20px 0;
+    }
+    nav .icon-burger{
+        display: flex;
+    }
+    .menu-bg{
+        background-color: rgba(95, 161, 8,0.955);
+        position: absolute;
+        height: calc(100vh - 100px);
+        width: 100vw;
+        top: -100vh;
+        bottom: 0;
+        left: 0;
+        right: 0;
+		z-index: 100;
+        transition: transform 0.5s ease;
+    }
+    #icon-burger:checked ~ .menu-bg{
+        transform: translateY(calc(100vh + 99px));
+        transition: transform 0.5s ease;
+    }
+}
+
+/* -----------------------------------------------------------------------------------------------BODY- */
+body {
+	padding: 0;
+	background-image:url("/Images/Background.webp")  ;
+}
+/* -----------------------------------------------------------------------------------------------FOOTER- */
+footer {
+	height:auto;
+	padding-top: 40px;
+	background-color: rgb(95, 161, 8);
+    bottom: 0;
+    left: 0;
+    right: 0;
+	color: black;
+    width: 100%;
+    border-top: double 5px black;
+
+}
+
+.footer-content{
+    padding: 10px;
+    
+}
+.footer-content p{
+    padding-top: 1%;
+    text-align: center;
+    color: white;
+}
+
+.Footer-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+    text-align:center;
+
+}
+
+.Footer-container p{
+    color: black;
+    font-size: 13px;
+    line-height: 28px;
+    margin: auto auto;
+    max-width: 500px;
+
+}
+
+.Footer-container h3{
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+
+}
+
+.Socialink{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+
+}
+
+.Socialink li{
+    margin: 0 9.999px;
+}
+
+.Socialink a{
+    text-decoration: none;
+    /* color: white; */
+    border: 3px solid black;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.Socialink a i{
+    font-size:1.1rem ;
+    width: 20px;
+    transition: color .4s ease;   
+}
+.Socialink a:hover i{
+    transform: scale(1.1,1.1);
+    color: grey;
+}
+.footer-bottom{
+    text-align: center;
+    background: #000;
+    /* height: max-content; */
+    /* width: 100%; */
+    margin: 2px 2px 2px 2px ;
+    padding-bottom: 10px;
+    text-align: center;
+    overflow: hidden;
+    /* height: 75px; */
+}
+
+.footer-bottom p{
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom p a{
+    color:#44bae8;
+    font-size: 16px;
+    text-decoration: none;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+.footer-menu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    white-space:nowrap;
+    font-size: 15px;
+    color: white;
+}
+
+.footer-menu ul{
+    display: flex;
+}
+
+.footer-menu ul li{
+
+    /* padding-right: 10px; */
+    display: block;
+    padding: 1%;
+    
+}
+.footer-menu ul li a{
+    color: white;
+    text-decoration: none;
+}
+.footer-menu ul li a:hover{
+    color: #27bcda;
+}
+
+.fa{
+    border-radius: 50%;
+    background-color: none;
+}
+.fa-facebook {
+	/* background: #3B5998; */
+	color: black;
+}
+  
+.fa-twitter {
+	/* background: #55ACEE; */
+	color: black;
+}
+  
+.fa-instagram {
+	/* background: #125688; */
+	color: black;
+}
+
+.fa-youtube {
+    color: black;
+}
+
+  
+.footer h6 {
+    text-align: bottom;
+}
+
+
+@media (max-width:800px) {
+    .footer-menu ul{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        }
+    .footer-menu{
+        white-space:initial;
+        white-space: nowrap;
+    }
+    .footer-content{
+        padding: 2%;
+    }
+    .footer-menu ul li{
+        display: block;
+        padding: 4%;
+        
+    }
+}
+

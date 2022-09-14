@@ -1,0 +1,85 @@
+.Mainphoto{
+    position: relative;
+    width: 100%;
+    
+
+}
+.Mainphoto img{
+    width: 100%;
+    filter: blur(1px);
+    object-fit: cover;
+}
+
+.Mainphoto h1{
+    
+    position: absolute;
+    top: 50%;
+    background: rgba(255,255,255,0.8);
+    padding: 2%;
+    margin: 2%;
+    font-size: 2vw;    
+}
+
+@media screen and (max-width:700px){
+    .Mainphoto img{
+        display:fle;
+        
+        width:80vw;
+    }
+    
+}
+.small-container{
+    max-width: auto;
+    margin: auto;
+    padding-left:25px ;
+    padding-right: 25px;
+    padding-top: 25px;
+
+}
+.small-container img{
+	width: 100%;
+}
+
+.small-container h2{
+    background-color: beige;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-1{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+	
+}
+.col-1 img{
+    width: 50%;
+    height: 50%;
+
+}
+.col-1 a ::after{
+    transition-duration:0.4s ;
+}
+.col-1 a img:hover {
+    transform: scale(1.05,1.05);
+    transition-duration: 0.4s;
+}
+
+.col-1 h4{
+	text-align: left;
+}
+
+.IMGOverwrite{
+	position: relative;
+	text-align: center;
+	
+    border: 100%;
+	size: 100;
+}
+
+

@@ -1,0 +1,91 @@
+/* -----------------------------------------------------------------------------------------------BODY- */
+
+.small-container{
+    max-width: auto;
+    margin: auto;
+    line-height: 25px;
+}
+.small-container img{
+	width: 100%;
+}
+.small-container h1{
+    text-align: center;
+}
+.small-container h2{
+    background:#CD9D6F ;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.mainPhoto{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.small-container .mainPhoto img{
+	height: auto !important ;
+    width: 80% !important;
+	padding-top: 0%;
+    box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+    
+}
+
+.Merch{
+    background:rgba(255, 255, 255);
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-1{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+	
+}
+.col-1 img{
+    /* width: 75%; */
+    height: 75%;
+    border:solid black 2px;
+
+}
+.col-1 a ::after{
+    transition-duration:0.4s ;
+}
+.col-1 a img:hover {
+    transform: scale(1.05,1.05);
+    transition-duration: 0.4s;
+}
+
+.col-1 h4{
+	text-align: center;
+}
+
+.col-1 button{
+    align-items: center;
+}
+.button{
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.button:hover{
+    background-color:rgb(95, 161, 8);
+}
+
+
