@@ -12,7 +12,7 @@ p{
     color: whitesmoke;
     padding: 50px;
     width: auto;
-    background-image: url(/Images/1.Homepage/MainPhoto.jpg);
+    background-image: url(/Images/1.Homepage/MainPhoto.webp);
     background-size: 10%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -107,7 +107,7 @@ h1,h2{
     position: absolute;
     height: inherit;
     width: 100%;
-    background: url('/Images/1.Homepage/MatchTea.jpg');
+    background: url('/Images/1.Homepage/MatchTea.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
