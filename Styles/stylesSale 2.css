@@ -10,9 +10,8 @@ a:hover{
 }
 body {
 	padding: 0;
-	background-image:url("Images/Background.webp")  ;
+	background-image:url("/Images/Background.webp")  ;
 }
-
 
 /* -----------------------------------------------------------------------------------------------NAVBAR- */
 
