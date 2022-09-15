@@ -1,27 +1,31 @@
 .Mainphoto{
-    position: relative;
-    width: 100%;
+    color: whitesmoke;
+    padding: 50px;
+    width: auto;
+    background-image: url(/Images/5.Sales/MainPhotoTS2.webp);
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 40px;
+	overflow:auto;
+    margin-top: 5%;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+    border-radius: 10px;
+    box-shadow: 0px 16px 32px 0px rgba(0,0,0,0.5);
 }
-.Mainphoto img{
-    width: 100%;
-    filter: blur(1px);
-    box-shadow: 0px 16px 32px 0px rgba(155,28,49,0.5);
+.Mainphoto h1 {
+    /* text-align: left !important; */
+    /* font-size: 2rem; */
+    background: rgba(0,0,0,0.5);
+    line-height: 30px;
+    padding: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: rgb(255, 255, 255);    
 }
-.Mainphoto h1{
-    position: absolute;
-    top: 50%;
-    background: rgb(255,215,0);
-    padding: 2%;
-    margin: 2%;
-    font-size: 2vw;
-    color: #9B1C31;    
-}
-
-@media screen and (max-width:700px){
-    .Mainphoto img{
-        display:flex;
-        width:80vw;
-    }   
+h1,h2{
+    text-align: center;
 }
 .small-container{
     max-width: auto;
@@ -36,7 +40,7 @@
 }
 
 .small-container h2{
-    background-color: beige;
+    border: 3px solid #550;
 }
 
 .row{
@@ -47,15 +51,25 @@
 }
 .col-1{
     flex-basis: 25%;
+    flex-direction: row;
+    justify-content: space-around;
     padding: 10px;
     min-width: 200px;
     margin-bottom: 50px;
-	
 }
 .col-1 img{
     width: 50%;
-    height: 50%;
-
+    margin-left: 25%;
+}
+.col-1 h4{
+	text-align: center;
+}
+.col-1 a:hover {
+    transform: scale(1.05,1.05);
+    transition-duration: 0.4s;
+}
+.col-1 button{
+    width: 100%; 
 }
 .col-1 a ::after{
     transition-duration:0.4s ;
@@ -64,17 +78,32 @@
     transform: scale(1.05,1.05);
     transition-duration: 0.4s;
 }
-
-.col-1 h4{
-	text-align: left;
-}
-
 .IMGOverwrite{
 	position: relative;
 	text-align: center;
-	
     border: 100%;
 	size: 100;
+}
+.button{
+    border: 2px solid rgba(155,28,4,0.1);
+    color: rgb(0, 0, 0);
+    padding: 10px 16px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.button:hover{
+    background-color:rgb(95, 161, 8);
+}
+@media (max-width: 400px){
+    .Mainphoto h1{
+        margin-left: 1% !important;
+        margin-right: 1% !important;
+    }
 }
 
 
