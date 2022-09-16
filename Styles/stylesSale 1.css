@@ -15,8 +15,6 @@
     box-shadow: 0px 16px 32px 0px rgba(0,0,0,0.5);
 }
 .Mainphoto h1 {
-    /* text-align: left !important; */
-    /* font-size: 2rem; */
     background: rgba(0,0,0,0.5);
     line-height: 30px;
     padding: 3%;
@@ -33,16 +31,13 @@ h1,h2{
     padding-left:25px ;
     padding-right: 25px;
     padding-top: 25px;
-
 }
 .small-container img{
 	width: 100%;
 }
-
 .small-container h2{
     border: 3px solid #550;
 }
-
 .row{
     display: flex;
     align-items: center;
@@ -105,5 +100,3 @@ h1,h2{
         margin-right: 1% !important;
     }
 }
-
-

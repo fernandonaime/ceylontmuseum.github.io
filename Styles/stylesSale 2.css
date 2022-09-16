@@ -2,7 +2,6 @@
     font-family:'Times New Roman', Times, serif;
 	margin: 0;
 	padding: 0;	
-    /* box-sizing: border-box; */
 }
 a:hover{
     transition-duration:0.4s ;
@@ -12,9 +11,7 @@ body {
 	padding: 0;
 	background-image:url("/Images/Background.webp")  ;
 }
-
 /* -----------------------------------------------------------------------------------------------NAVBAR- */
-
 #navbar{
     width: 100%;
     height: auto;
@@ -59,8 +56,7 @@ nav ul li a{
 .dropdown {
     float: left;
     overflow: hidden;
-  }
-  
+}  
 .dropdown .dropbtn {
     font-size: 17px;  
     border: none;
@@ -70,8 +66,7 @@ nav ul li a{
     font-family: inherit;
     margin: 0;
     color: rgb(255,215,0);
-}
-  
+} 
 .dropdown-content {
     display: none;
     position: absolute;
@@ -80,9 +75,7 @@ nav ul li a{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border-radius: 10px;
-
 }
-  
 .dropdown-content a {
     float: none;
     color: rgb(255,215,0);
@@ -91,16 +84,13 @@ nav ul li a{
     display: block;
     text-align: left;
 }
-  
 .dropdown-content a:hover {
     background-color: #ddd;
     border-radius: 4px;
 }
-  
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 .icon-burger{
     position: absolute;
     display: none;
@@ -113,7 +103,6 @@ nav ul li a{
     z-index: 101;
     cursor: pointer;
 }
-
 .icon-burger span{
     width: 25px;
     height: 4px;
@@ -161,7 +150,6 @@ nav ul li a{
     }
 }
 /* -----------------------------------------------------------------------------------------------BODY- */
-
 .Mainphoto{
     color: whitesmoke;
     padding: 50px;
@@ -179,8 +167,6 @@ nav ul li a{
     box-shadow: 0px 16px 32px 0px rgba(155,28,49,0.5);
 }
 .Mainphoto h1 {
-    /* text-align: left !important; */
-    /* font-size: 2rem; */
     background: rgba(155,28,49, 0.9);
     line-height: 30px;
     padding: 3%;
@@ -202,13 +188,11 @@ h1,h2{
 .small-container img{
 	width: 100%;
 }
-
 .small-container h2{
     color: rgb(255,215,0);
     background: rgba(155,28,49, 0.9);
     
 }
-
 .row{
     display: flex;
     align-items: center;
@@ -272,9 +256,6 @@ h1,h2{
         margin-right: 1% !important;
     }
 }
-
-
-
 /* -----------------------------------------------------------------------------------------------FOOTER- */
 footer {
 	height:auto;
@@ -285,65 +266,50 @@ footer {
     right: 0;
 	color: rgb(255,215,0);
     width: 100%;
-
 }
-
 .footer-content{
     padding: 10px;
-    
 }
 .footer-content p{
     padding-top: 1%;
     text-align: center;
 }
-
 .Footer-container{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
     text-align:center;
-
 }
-
 .Footer-container p{
     color: rgb(255,215,0);
     font-size: 13px;
     line-height: 28px;
     margin: auto auto;
     max-width: 500px;
-
 }
-
 .Footer-container h3{
     font-size: 2rem;
     font-weight: 500;
     text-transform: capitalize;
     line-height: 3rem;
-
 }
-
 .Socialink{
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 1rem 0 3rem 0;
-
 }
-
 .Socialink li{
     margin: 0 9.999px;
 }
-
 .Socialink a{
     text-decoration: none;
     color:rgb(255,215,0) ;
     border: 3px solid black;
     padding: 5px;
-    /* border-radius: 50%; */
 }
-
 .Socialink a i{
     font-size:1.1rem ;
     width: 20px;
@@ -356,15 +322,11 @@ footer {
 .footer-bottom{
     text-align: center;
     background: #000;
-    /* height: max-content; */
-    /* width: 100%; */
     margin: 2px 2px 2px 2px ;
     padding-bottom: 10px;
     text-align: center;
     overflow: hidden;
-    /* height: 75px; */
 }
-
 .footer-bottom p{
     float: left;
     font-size: 14px;
@@ -390,17 +352,12 @@ footer {
     white-space:nowrap;
     font-size: 15px;
 }
-
 .footer-menu ul{
     display: flex;
 }
-
 .footer-menu ul li{
-
-    /* padding-right: 10px; */
     display: block;
-    padding: 1%;
-    
+    padding: 1%;   
 }
 .footer-menu ul li a{
     color: #cfd2d6;
@@ -409,16 +366,12 @@ footer {
 .footer-menu ul li a:hover{
     color: #27bcda;
 }
-
 .fa{
     background-color: none;
 }
-
 .footer h6 {
     text-align: bottom;
 }
-
-
 @media (max-width:800px) {
     .footer-menu ul{
         display: flex;
@@ -436,6 +389,5 @@ footer {
     .footer-menu ul li{
         display: block;
         padding: 4%;
-        
     }
 }

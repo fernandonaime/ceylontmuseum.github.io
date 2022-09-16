@@ -1,11 +1,7 @@
-
 /* -----------------------------------------------------------------------------------------------BODY- */
-
 p{
     font-size: 1.1rem;
 }
-
-
 .description{
     color: whitesmoke;
     padding: 50px;
@@ -21,7 +17,6 @@ p{
     margin-right: 10% !important;
     border-radius: 10px;
 }
-
 .description h1 p{
     line-height: 20px;
     padding: 30px 0 30px 0;
@@ -31,12 +26,10 @@ p{
 #Logocenter img {
     width: 200px;  
 }
-
 .List li{
     margin-left: 5%;
     margin-right: 5%;
 }
-
 .small-container{
     max-width: auto;
     margin: 0 20px;
@@ -52,18 +45,6 @@ p{
 h1,h2{
     text-align: center !important ;
 }
-/* .mainPhoto{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.mainPhoto img{
-	height: auto !important ;
-    width: 80% !important;
-	padding-top: 0%;
-    
-} */
 .row{
     display: flex;
     align-items: center;
@@ -91,7 +72,6 @@ h1,h2{
 .col-1 button{
     width: 100%; 
 }
-
 .MaGT{
     display: flex;
     align-items: center;
@@ -99,7 +79,6 @@ h1,h2{
     margin-top: 50px;
     height: 500px;
 }
-
 .MaGT::before{
     content: '';
     position: absolute;
@@ -115,7 +94,6 @@ h1,h2{
     opacity: 08;
     overflow: scroll;
 }
-
 .text-block{
 	line-height: 200%;
     color: black;
@@ -128,7 +106,6 @@ h1,h2{
     top: 50%;
     padding: 25px;
 }
-
 @media (max-width: 500px){
     .MaGT{
         height: 500px;
@@ -145,8 +122,6 @@ h1,h2{
     .button{
         font-size: 10px !important;
     }
-    
-
 }
 .button{
     border: none;
@@ -170,14 +145,3 @@ h1,h2{
 .medical{
     background-color:bisque;
 }
-
-
-
-
-
-
-
-
-
-
-
