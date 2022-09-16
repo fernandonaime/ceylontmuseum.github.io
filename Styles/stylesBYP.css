@@ -1,5 +1,4 @@
 /* -----------------------------------------------------------------------------------------------BODY- */
-
 .small-container{
     max-width: auto;
     margin: auto;
@@ -20,7 +19,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
-
 .col-1{
     flex-basis: 25%;
     padding: 10px;

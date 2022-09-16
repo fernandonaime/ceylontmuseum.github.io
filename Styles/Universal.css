@@ -1,5 +1,4 @@
 *{
-    font-family:'Times New Roman', Times, serif;
 	margin: 0;
 	padding: 0;	
 }
@@ -7,10 +6,7 @@ a:hover{
     transition-duration:0.4s ;
     transform: scale(1.1,1.1);
 }
-@font-face {
-	font-family: "My Font Name";
-	src: url("assets/myfontname.ttf") format("truetype");
-  }
+
 /* -----------------------------------------------------------------------------------------------NAVBAR- */
 #navbar{
     width: 100%;
@@ -39,11 +35,11 @@ nav ul li{
     list-style: none;
 }
 nav ul li a{
+    font-family: 'Arapey'; font-size: 20px;
     display: block;
     text-decoration: none;
     text-align: center;
     color: #000;
-    font-size: 17px;
     padding: 0 20px;
 }
 .mb-logo{
@@ -55,10 +51,10 @@ nav ul li a{
 }
 .dropdown {
     float: left;
+    font-family: 'Arapey'; font-size: 20px;
     overflow: hidden;
 }
-.dropdown .dropbtn {
-    font-size: 17px;  
+.dropdown .dropbtn {  
     border: none;
     outline: none;
     padding: 14px 16px;
@@ -152,6 +148,9 @@ nav ul li a{
 body {
 	padding: 0;
 	background-image:url("/Images/Background.webp")  ;
+}
+h1, h2{
+    font-family: 'Arapey';font-size: 30px;
 }
 /* -----------------------------------------------------------------------------------------------FOOTER- */
 footer {
