@@ -256,6 +256,10 @@ h1,h2{
         margin-right: 1% !important;
     }
 }
+.cate h3{
+    font-size: 25px;
+    color: #9B1C31;
+}
 /* -----------------------------------------------------------------------------------------------FOOTER- */
 footer {
 	height:auto;
