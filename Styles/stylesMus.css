@@ -12,9 +12,9 @@ iframe {
 .small-container {
     max-width: auto;
     /* margin: auto; */
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 25px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2%;
 }
 
 a {
@@ -27,7 +27,11 @@ a:hover {
     color: #550;
 
 }
-
+.small-container figcaption{
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    padding-top: 0% !important;
+}
 
 figure {
     display: flex;
@@ -40,6 +44,10 @@ figcaption {
 .image-left {
     flex-direction: row-reverse;
 }
+.image-left img{
+    height: 25%;
+    width: 25%;
+}
 
 .image-right {
     flex-direction: column;
@@ -50,26 +58,16 @@ figcaption {
     width: 100%;
 }
 
-/* @media screen and (max-width:750px) {
-    .image-right {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .image-right img {
-        width: 100%;
-
-    }
-} */
-
-@media screen and (max-width:750px) {
+@media screen and (max-width:600px) {
     .image-left {
         display: flex;
         flex-direction: column;
     }
 
     .image-left img {
-        width: 100%;
+        margin-left: 10%;
+        width: 75%;
+        padding-bottom: 3%;
     }
 }
 

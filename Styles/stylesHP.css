@@ -52,18 +52,18 @@ p{
 h1,h2{
     text-align: center !important ;
 }
-.mainPhoto{
+/* .mainPhoto{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.small-container .mainPhoto img{
+.mainPhoto img{
 	height: auto !important ;
     width: 80% !important;
 	padding-top: 0%;
     
-}
+} */
 .row{
     display: flex;
     align-items: center;

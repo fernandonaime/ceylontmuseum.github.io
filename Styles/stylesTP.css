@@ -132,26 +132,26 @@ p{
 }
 
 #High{
-    background-color:#66ff00;
+    background-color: #a7bed3;
     width: 40%;
 }
 #Mid{
-    background-color:#52cc00;
+    background-color:  #f1ffc4;
     width: 40%;
 }
 #Low{
-    background-color:#3d9900;
+    background-color:  #dab894;;
     width: 40%;
 }
 
 .diversity tr:nth-of-type(2),.diversity tr:nth-of-type(3) {
-    background-color:#66ff00;
+    background-color:#a7bed3;
    }
 .diversity tr:nth-of-type(4),.diversity tr:nth-of-type(5) {
-    background-color:#52cc00;
+    background-color:#f1ffc4;
    }
 .diversity tr:nth-of-type(6),.diversity tr:nth-of-type(7),.diversity tr:nth-of-type(8) {
-    background-color:#3d9900;
+    background-color:#dab894;
    }
 
 iframe{
