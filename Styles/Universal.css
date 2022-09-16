@@ -150,6 +150,7 @@ body {
 	background-image:url("/Images/Background.webp")  ;
 }
 h1, h2{
+    text-align: center;
     font-family: 'Arapey';font-size: 30px;
 }
 /* -----------------------------------------------------------------------------------------------FOOTER- */
