@@ -8,7 +8,10 @@ function inputValidation(){
     var cardholderName = document.getElementById("cardHolder").value;
     var mothInput = document.getElementById("monthInput").value;
     var yearInput = document.getElementById("yearInput").value;
-    var fixedDonatons = document.getElementById("fixedDonatons").value;
+    // var fixedDonatons = document.getElementById("fixedDonatons").value;
+
+    var checkbox = document.getElementById('myCheckbox'); 
+    var checkboxValue = checkbox.checked; console.log(checkboxValue);
 
     var email_pattern = /^[A-Za-z\d\.\_]+\@[A-Za-z\d\.\-]+\.[A-Za-z]{2,5}$/;
     var name_pattern = /^\b(?!.*\.{2})[a-zA-Z.]+(?:\s[a-zA-Z.]+)\b$/;
@@ -85,7 +88,7 @@ function inputValidation(){
 
 // clear form after click the Donate button
 function clearDonatiom(){
-  const inputs = document.querySelectorAll('#name, #email, #address, #fixedDonatons, #comment, #cardNum, #cardHolder, #monthInput, #yearInput, #cvv');
+  const inputs = document.querySelectorAll('#name, #email, #address, #myCheckbox, #comment, #cardNum, #cardHolder, #monthInput, #yearInput, #cvv');
 
   inputs.forEach(input => {
     input.value = '';
