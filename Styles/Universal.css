@@ -39,7 +39,7 @@ nav ul li a{
     display: block;
     text-decoration: none;
     text-align: center;
-    color: #000;
+    color: #000 !important;
     padding: 0 20px;
 }
 .mb-logo{
@@ -73,7 +73,7 @@ nav ul li a{
 }
 .dropdown-content a {
     float: none;
-    color: black;
+    color: black !important;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -147,7 +147,7 @@ nav ul li a{
 /* -----------------------------------------------------------------------------------------------BODY- */
 body {
 	padding: 0;
-	background-image:url("/Images/Background.webp")  ;
+	background-image:url("/fernandonaime.github.io/Images/Background.webp")  ;
 }
 h1, h2{
     text-align: center;
@@ -216,7 +216,8 @@ footer {
 }
 .Socialink a:hover i{
     transform: scale(1.1,1.1);
-    color: grey;
+    color: rgb(20, 1, 221);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 .footer-bottom{
     text-align: center;

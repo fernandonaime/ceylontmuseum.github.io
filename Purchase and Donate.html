@@ -8,7 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Arapey' rel='stylesheet'>
     <link rel="stylesheet" href="Styles/normalize.css">
     <link rel="stylesheet" href="Styles/Universal.css">
-    <link rel="stylesheet" href="Styles/stylesP&D.css">
+    <link rel="stylesheet" href="Styles/testP&d.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="Universal/Favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="Universal/Favicon/favicon-32x32.png">
@@ -17,7 +17,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Ceylon Tea®| Purchase & Donate</title>
-    
+    <script src="/Script/P&D.js" ></script>
 </head>
 <body>
     <section id="navbar">
@@ -197,10 +197,7 @@
             <div class="Form" >
                 <div class="row" >
                     <div class="col-2" >
-                        <p id="Donatepara" >
-                            Please donate to our Ceylon tea general fund where we will allocate your donations to the most needed project. Thank you. <br>
-                            Our mandate is to deliver high quality, accessible educational programmes, both full-time and part time, to young people and children from the tea estates surrounding Maskeliya, Nuwara Eliya and Talawakelle region of Central Province, Sri Lanka. <br>
-                        <p>
+                        
                         <p>
                             Donate on our trusted donations company
                             <a href="https://tealeaftrust.com/donate/"><button class="button">Donate On Tea Leaf Trust </button></a> <br>
@@ -222,7 +219,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-1" >
+                    <!-- <div class="col-1" >
                         <form>
                             <label for="fname">First name:</label> <br>
                             <input type="text" id="fname" name="fname" value="Somasingha" > <br>
@@ -241,14 +238,126 @@
         
                             <label for="Amount">Amount:</label> <br>
                             <input type="number" id="Amount" name="Amount" value="5.00"> <br> <br>
+
+                            <select name="language" class="custom-select" id="fixedDonatons" multiple >
+                                <option value="100">LKR 100 </option>
+                                <option value="500">LKR 500 </option>
+                                <option value="1000">LKR 1000 </option>
+                                <option value="2500">LKR 2500 </option>
+                                <option value="5000">LKR 5000 </option>
+                                
+                              </select>
+                            <textarea  rows="5" id="comment" placeholder="Donation Commment" required ></textarea>
         
                             <input type="submit" id="submit" value="donate">
                         </form>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </section>
+    <section class="Donating_Section">
+        <p id="Donatepara" >
+            Please donate to our Ceylon tea general fund where we will allocate your donations to the most needed project. Thank you. <br>
+            Our mandate is to deliver high quality, accessible educational programmes, both full-time and part time, to young people and children from the tea estates surrounding Maskeliya, Nuwara Eliya and Talawakelle region of Central Province, Sri Lanka. <br>
+        <p>
+        <p>
+            <div class="donation-form">
+                <form action="" class="contact-col" id="frmDonation">
+                    <label for="nameinput"></label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                    <label for="email"></label>
+                    <input type="email" id="email" placeholder="Enter your email" required >
+                    <textarea  rows="3" id="address" placeholder="Enter your address" required ></textarea>
+                    <label for="Donations" id="fixedDonations" class="lbdate">Select fixed Donation values from below list</label>
+
+
+
+                    <label for="Donations" id="/">LKR 100</label>
+                    <input type="checkbox" id="/" value="100">
+
+                    <label for="Donations" id="/">LKR 500</label>
+                    <input type="checkbox" id="/" value="500">
+
+                    <label for="Donations" id="/">LKR 1000</label>
+                    <input type="checkbox" id="/" value="1000">
+
+                    <label for="Donations" id="/">LKR 2000</label>
+                    <input type="checkbox" id="/" value="2000">
+
+                    <label for="Donations" id="/">LKR 5000</label>
+                    <input type="checkbox" id="/" value="5000">
+
+                    <label for="Donations" id="/">LKR 10,000</label>
+                    <input type="checkbox" id="/" value="10,000">
+
+
+
+                    <textarea  rows="5" id="comment" placeholder="Donation Commment" required ></textarea>
+                    
+                </form>
+
+                <form class="paymentDetails" action=""  method="post" >
+                    <div class="inputBox">
+                        <span>Card number</span>
+                        <label for="cardNumber"></label>
+                        <input type="text" id="cardNum" maxlength="16" class="card-number-input">
+                    </div>
+                    <div class="inputBox">
+                        <span>Card holder</span>
+                        <label for="cardholder"></label>
+                        <input type="text" id="cardHolder" class="card-holder-input">
+                    </div>
+
+                    
+                    <div class="flexbox">
+                        <div class="inputBox" >
+                            <span> mm</span>
+                            <select name="" id="monthInput" class="month-input">
+                                <option value="month" selected disabled>Month</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+                        <div class="inputBox">
+                            <span> yy</span>
+                            <select name="" id="yearInput" class="year-input" onselect="inputValidatiom()">
+                                <option value="year" selected disabled>Year</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>  
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                            </select>
+                        </div>
+                        <div class="inputBox" id="cvvInput">
+                            <span>cvv</span>
+                            <input type="text" id="cvv" maxlength="3" class="cvv-input" >
+                        </div>
+                    </div>
+                    <input type="button" value="Donate" id="donateBtn" class="submit-btn" onclick="inputValidation();">
+                </form>
+
+
+            </div> 
+            
+    </section>
+
+
     <footer>
         <div class="Footer-container">
             <div class="footer-content" >

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This page introduces to book museum tickets">
+    <link href='https://fonts.googleapis.com/css?family=Arapey' rel='stylesheet'>
+    <link rel="stylesheet" href="Styles/normalize.css">
+    <link rel="stylesheet" href="Styles/testMTStyles.css">
+    <link rel="stylesheet" href="Styles/Universal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="Universal/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Universal/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Universal/Favicon/browserconfig.xml">
+    <link rel="manifest" href="Universal/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title> Ceylon Tea® | Home Page</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="Script/testMTJS.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> -->
+
+
+</head>
+<body>
+  <section id="navbar">
+    <nav>
+        <div class="logo mb-logo"> <a href="index.html"><img src="Images/TEALG.png" alt="this is the main logo in burger"></a> </div>
+        <input id="icon-burger" type="checkbox">
+        <div class="menu-bg">
+            <ul class="links">
+                <a href="index.html"><div class="logo cmp-logo"><img src="Images/TEALG.png" alt="this is the main logo"></div></a>
+                <li><a href="Tea Plantations.html">Tea Plantations</a></li>
+                <li><a href="CeylonTeaMuseum.html">Tea Museum</a></li>
+                   
+                <li><a href="CeylonBYP.html">By- Products</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">Tea Sales
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="TeaSales 1.html">Tea Sales 1</a>
+                      <a href="TeaSales 2.html">Tea Sales 2</a>
+                      
+                    </div>
+                </div>
+                <li><a href="Purchase and Donate.html">Purchase & Donate</a></li>
+                
+            </ul>
+        </div>
+        <label for="icon-burger" class="icon-burger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </label>
+    </nav>
+</section>
+    <h1 id="TktBookH1" >Ticket Booking</h1>
+    <div class="container">
+    
+      <form id="form" class="form-horizontal">
+           <div class="form-group">
+            <label class="control-label col-sm-2" for="bookDates" name="date">When are you coming:</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" id="date" placeholder="date" name="date" for="bookDates">
+            </div>
+          </div> 
+
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="fname">First Name:</label>
+            <div class="col-sm-10">          
+              <input type="text" class="form-control" id="fname" placeholder="First Name" name="fname"  >
+            </div>
+          </div>
+
+
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="lname">Last Name:</label>
+            <div class="col-sm-10">          
+              <input type="text" class="form-control" id="lname" placeholder="Last Name" name="lname" >
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Gender:</label>
+            <div class="col-sm-10"> 
+              <select name="gender" id="gender" class="select__item">
+                <option value=0 >Select Gender</option>
+                <option value=1 >Male</option>
+                <option value=2>Female</option>
+              </select>
+            </div>
+          </div>
+
+
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email" name="email">Your email:</label>
+            <div class="col-sm-10"> 
+                <input type="email" class="form-control" id="email" placeholder="abcd#@##.com" name="email">
+            </div>
+          </div>
+
+
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="cemail" name="cemail" >Confirm- email:</label>
+            <div class="col-sm-10">          
+              <input type="email" class="form-control" id="cemail" placeholder="abcd#@##.com" name="cemail">
+            </div>
+          </div>
+          <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <label for="time" class="control-label col-sm-2">Time:</label>
+              <select name="time" id="timeDuration" class="select__item" onchange="calculateCost();">
+                <option value="" >Select the duration</option>
+                <option value="0" >3 hours</option>
+                <option value="1">½ day</option>
+                <option value="2">full day</option>
+            </select>            
+          </div> <br>
+          <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Category- pricing (SLRs) <i>*Conditions applied</i></th>
+                    <th>Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <label for="sladult">SL Adult Pass -1200 </label> </td>
+                    <td><input type="number" min="0" max="10" id="sladult" name="sladult" onblur="calculateCost();" > <br> 
+                </tr>
+                <tr>
+                    <td> <label for="slchild">SL Child Pass -700</label> </td>
+                    <td><input type="number" min="0" max="10"  id="slchild" name="slchild" onblur="calculateCost();"> <br></td>
+                </tr>
+                <tr>
+                    <td><label for="fradult">Foreigner Adult Pass -5500 </label></td>
+                    
+                    <td><input type="number" min="0" max="10"  id="fradult" name="fradult" onblur="calculateCost();">  <br></td>  
+                </tr>
+                <tr>
+                    <td><label for="frchild">Foreigner Child Pass -2700 </label></td>
+                    <td><input type="number" min="0" max="10"  id="frchild" name="frchild" onblur="calculateCost();">  <br></td> 
+                </tr>
+                <tr>
+                    <td>Infant (Foreigner or SL)</td>
+                    <td>Free</td>
+                </tr>
+            </tbody>
+          </table> <br>
+          
+          <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <p id="crrntOrder">Cost of the current order : LKR <span id="spCost">0.00</span></p>
+            </div>
+          </div>
+          </div> <br> 
+          
+          <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <p><button type="submit" class="btn btn-default" id="add"><b>ADD TO ORDER</b></button></p>
+              
+            </div>
+          </div>
+          
+        
+        </form>
+
+        <div >
+            <h2>Cart</h2>
+            <table id="cart">
+              <tr>
+                <th>SL Adult prices (LKR 1200)</th>
+                <th>SL Child prices (LKR 700)</th>
+                <th>Foreigner Adult prices </th>
+                <th>Foreigner Adult prices </th>
+                <th>Cost</th>
+                <th>Remove your data after adding to order</th>
+              </tr>
+            </table>
+        </div>
+        <div>
+          <p>Total cost : <span id="grandTotal"></span></p>
+        </div>
+        <p><i>Powered by <b>Lipton®</b> </i></p>
+
+
+
+
+
+
+        
+    </div>
+    <footer>
+      <div class="Footer-container">
+          <div class="footer-content" >
+              <h3>Ceylon Tea</h3>
+              <p>
+                  Ceylon tea is both the brand of tea which is produced in Sri Lanka <br> 
+                  and a historic term describing tea from that land.<br>
+  
+              </p>
+              <ul class="Socialink" >
+                  <li><a href="https://web.facebook.com/srilankateaboard/">.<i class="fa fa-facebook">.</i></a></li>
+                  <li><a href="https://www.instagram.com/slteaboard/">.<i class="fa fa-instagram">.</i></a></li>
+                  <li><a href="https://twitter.com/SLTeaBoard">.<i class="fa fa-twitter">.</i></a></li>
+                  <li><a href="https://www.youtube.com/channel/UC_ZBCtYgMiknB47TBKxqdjw">.<i class="fa fa-youtube">.</i></a></li>
+              </ul>
+          </div>
+          
+  
+  
+      </div>
+      <div class="footer-bottom" >
+          <div class="footer-content" >
+              <p> copyright &copy;2022 <a href="#">Nemasha Fernando</a> </p> <br>
+          </div>
+          
+          <div class="footer-content" >
+              <div class="footer-menu">
+                  <h4>CHECK OUT ALL OUR PAGES</h4>
+                  <ul>
+                      <li><a href="Tea Plantations.html">Tea Plantations</a> | </li>
+                      <li><a href="CeylonTeaMuseum.html">Tea Museum</a> | </li>
+                      <li><a href="CeylonBYP.html">By- Products</a> | </li>
+                      <li><a href="TeaSales 1.html">Sales Page 1</a> | </li>
+                      <li><a href="TeaSales 2.html">Sales Page 2</a> | </li>
+                      <li><a href="Purchase and Donate.html">Purchase & Donate</a></li>
+                  </ul>    
+              </div>
+          </div>
+      </div>
+      <!-- 
+      
+      REFERENCES
+  
+          Lipton. (2022) Our teas. [Online] Available from:
+          https://www.lipton.com/us/en/our-teas.html
+  
+      
+          Dilmah . (2018) CLimate reality [Online] Available from:
+          https://www.dilmahconservation.org/climate-reality/
+          
+
+          Halpe Tea. (2022) Ceylon Tea Guide. [Online] Available from:
+          https://www.halpetea.com/ceylon-tea-guide.html
+  
+  
+          Srilankan Tea Board. (2014) Home page. [Online] Available from:
+          https://www.srilankateaboard.lk/
+  
+      -->
+  </footer>
+              
+</body>
+</html>    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
