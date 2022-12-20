@@ -168,7 +168,6 @@ form.addEventListener('submit', (event) => {
 
     let cocost = parseFloat(document.getElementById("spCost").innerHTML);
     totalforFav=cocost;
-    alert(cocost);
     if(cocost == 0){
         alert("You cannot place an order without any items in the current order. Please add one or more items to continue.");
         return;
@@ -254,7 +253,6 @@ function resetPurchaseForm(){
 
         let FinalLoyaltyPoint = 0;
         let loyaltyPoints =0;
-        // totalTickets= parseInt(totalsl+totalfr)
 function loyalty(){
     const sladult = document.getElementById("sladult").value; 
     const slchild = document.getElementById("slchild").value; 
@@ -262,7 +260,6 @@ function loyalty(){
     const frchild = document.getElementById("frchild").value; 
         
         let totalTickets = (fradult+frchild) + (sladult+slchild);
-        // alert(totalTickets)
         let temp1;
         if(totalTickets > 3){
             loyaltyPoints = 15 * totalTickets;
@@ -307,6 +304,7 @@ function Getfavourites(){
     const frchild = document.getElementById("frchild"); 
 
 
+
     let getfav=localStorage.getItem("FVRT",favtemp1)
     let getfav2=JSON.parse(getfav)
     console.log(typeof(getfav2["Fsladult"]))
@@ -319,6 +317,9 @@ function Getfavourites(){
     slchild.setAttribute("value",SCH)
     fradult.setAttribute("value",FAD)
     frchild.setAttribute("value",FCH)
+
+    alert("Only your ticket values will be updated, to add to the order fill the credentials above the ticket purchase...Thank You !")
+
 
 }
 
