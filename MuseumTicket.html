@@ -55,9 +55,9 @@
             </ul>
         </div>
         <label for="icon-burger" class="icon-burger">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
+            <span id="icon-burger" class="line"></span>
+            <span id="icon-burger" class="line"></span>
+            <span id="icon-burger" class="line"></span>
         </label>
     </nav>
 </section>
@@ -66,7 +66,7 @@
     
       <form id="form" class="form-horizontal">
            <div class="form-group">
-            <label class="control-label col-sm-2" for="bookDates" name="date">When are you coming:</label>
+            <label class="control-label col-sm-2" for="date" name="date">When are you coming:</label>
             <div class="col-sm-10">
               <input type="date" class="form-control" id="date" placeholder="date" name="date" for="bookDates">
             </div>
@@ -91,12 +91,12 @@
 
 
           <div class="form-group">
-            <label class="control-label col-sm-2" for="email">Gender:</label>
+            <label class="control-label col-sm-2" for="Gender">Gender:</label>
             <div class="col-sm-10"> 
-              <select name="gender" id="gender" class="select__item">
-                <option value=0 >Select Gender</option>
-                <option value=1 >Male</option>
-                <option value=2>Female</option>
+              <select name="gender" id="Gender" class="select__item">
+                <option id="Gender" value=0 >Select Gender</option>
+                <option id="Gender" value=1 >Male</option>
+                <option id="Gender" value=2>Female</option>
               </select>
             </div>
           </div>
@@ -120,12 +120,12 @@
           </div>
           <div class="form-group">        
             <div class="col-sm-offset-2 col-sm-10">
-              <label for="time" class="control-label col-sm-2">Time:</label>
+              <label for="timeDuration" class="control-label col-sm-2">Time:</label>
               <select name="time" id="timeDuration" class="select__item" onchange="calculateCost();">
-                <option value="" >Select the duration</option>
-                <option value="0" >3 hours</option>
-                <option value="1">½ day</option>
-                <option value="2">full day</option>
+                <option id="timeDuration" value="" >Select the duration</option>
+                <option id="timeDuration" value="0" >3 hours</option>
+                <option id="timeDuration" value="1">½ day</option>
+                <option id="timeDuration" value="2">full day</option>
             </select>            
           </div> <br>
           <table class="table table-bordered">
@@ -170,9 +170,9 @@
           <div class="form-group">        
             <div class="col-sm-offset-2 col-sm-10">
               <p><button type="submit" class="btn btn-default" id="add"><b>ADD TO ORDER</b></button></p>
-              
             </div>
           </div>
+          
           
         
         </form>
@@ -190,9 +190,25 @@
               </tr>
             </table>
         </div>
+        <div class="form-group">        
+          <div class="col-sm-offset-2 col-sm-10">
+            <p><button id="SubButtons" onclick="loyalty();">Check loyalty</button></p>
+          </div>
+        </div>
+        <div class="form-group">        
+          <div class="col-sm-offset-2 col-sm-10">
+            <p><button id="SubButtons" onclick="Setfavourites();">Set Favourite</button></p>
+          </div>
+        </div>
+        <div class="form-group">        
+          <div class="col-sm-offset-2 col-sm-10">
+            <p><button id="SubButtons" onclick="Getfavourites();">Get Favourite</button></p>
+          </div>
+        </div>
         <div>
           <p>Total cost : <span id="grandTotal"></span></p>
         </div>
+        
         <p><i>Powered by <b>Lipton®</b> </i></p>
 
 

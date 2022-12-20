@@ -14,7 +14,6 @@ function calculateCost(){
     var totalsl = 0 ;
     var totalfr = 0 ;
     let totalCost = 0;
-    let totalTickets =0;
     
 
     
@@ -91,16 +90,8 @@ function calculateCost(){
     totalCost = ((sladult*1200) + (slchild*700)  + (fradult*5500) + (frchild*2700) + (totalsl*600) + (totalfr*800));
     }
 
-    // alert(totalCost);
 
     document.getElementById("spCost").innerHTML = totalCost.toFixed(2);
-    
-
-    
-
-    
-
-   
 
 
 }
@@ -172,11 +163,11 @@ const cart = document.getElementById('cart');
 
 let grandcost = 0;
 let overallCode = 0;
-
+let totalforFav;
 form.addEventListener('submit', (event) => {
 
-    var cocost = parseFloat(document.getElementById("spCost").innerHTML);
-   
+    let cocost = parseFloat(document.getElementById("spCost").innerHTML);
+    totalforFav=cocost;
     alert(cocost);
     if(cocost == 0){
         alert("You cannot place an order without any items in the current order. Please add one or more items to continue.");
@@ -185,20 +176,20 @@ form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   // Get the values of the form inputs
-  const slAdultPass = form.elements['sladult'].value;
-  const slChildPass = form.elements['slchild'].value;
-  const foreignerAdultPass = form.elements['fradult'].value;
-  const foreignerChildPass = form.elements['frchild'].value;
+  const slAdultTkt = form.elements['sladult'].value;
+  const slChildTkt = form.elements['slchild'].value;
+  const foreignerAdultTkt = form.elements['fradult'].value;
+  const foreignerChildtkt = form.elements['frchild'].value;
 
 
 
   // Add the product to the cart
   const tr = document.createElement('tr');
   tr.innerHTML = `
-    <td>${slAdultPass}</td>
-    <td>${slChildPass}</td>
-    <td>${foreignerAdultPass}</td>
-    <td>${foreignerChildPass}</td>
+    <td>${slAdultTkt}</td>
+    <td>${slChildTkt}</td>
+    <td>${foreignerAdultTkt}</td>
+    <td>${foreignerChildtkt}</td>
     <td>${cocost}</td>
     <td><button class="remove-button">Remove</button></td>
   `;
@@ -234,42 +225,7 @@ function resetPurchaseForm(){
 
 
 
-// --------incDec buttons-----------
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// --------incDec buttons--------
 
 //Date validation for javascrpt
         //-----------------------------
@@ -298,31 +254,73 @@ function resetPurchaseForm(){
 
         let FinalLoyaltyPoint = 0;
         let loyaltyPoints =0;
-        totalTickets= parseInt(totalsl+totalfr)
-
-
-        function calcLoyaltyPoints(){
+        // totalTickets= parseInt(totalsl+totalfr)
+function loyalty(){
+    const sladult = document.getElementById("sladult").value; 
+    const slchild = document.getElementById("slchild").value; 
+    const fradult = document.getElementById("fradult").value; 
+    const frchild = document.getElementById("frchild").value; 
         
-        
-        totalTickets += FRppl + SLppl;
+        let totalTickets = (fradult+frchild) + (sladult+slchild);
+        // alert(totalTickets)
+        let temp1;
         if(totalTickets > 3){
             loyaltyPoints = 15 * totalTickets;
             FinalLoyaltyPoint +=  loyaltyPoints; 
-            localStorage.setItem("LYTY",FinalLoyaltyPoint);
+            let temp = {LYTY:FinalLoyaltyPoint}
+            temp1=JSON.stringify(temp)
+            localStorage.setItem("LYTY",temp1);
         }
-        }
-
-        function showLoyaltyPoints(){
         
-            FinalLoyaltyPoint = JSON.parse(localStorage.getItem(`LYTY`));
+
+        FinalLoyaltyPoint = localStorage.getItem("LYTY", temp1);
+        let temp3=JSON.parse(FinalLoyaltyPoint)
+        console.log(temp3["LYTY"])
         
-        if(FinalLoyaltyPoint>0){
-            alert("Congratulations! You have earned "+  FinalLoyaltyPoint + " loyalty points so far");
+        if(temp3["LYTY"]>0){
+            alert("Current loyalty point value is "+  temp3["LYTY"] + " ! Lets goo");
         }
-        else{
-            alert("Sorry! You don't have any loyalty points so far");
+        else if(temp3["LYTY"]=0){
+            alert("No loyalty points obtained, select atleast 3 tickets to obtain loyalty points");
         }
-        }
+       
+}
+let favtemp1;
+function Setfavourites(){
+    const sladult = document.getElementById("sladult").value; 
+    const slchild = document.getElementById("slchild").value; 
+    const fradult = document.getElementById("fradult").value; 
+    const frchild = document.getElementById("frchild").value; 
+
+    let favorder={Fsladult:sladult, Fslchild: slchild, Ffradult: fradult, Ffrchild: frchild, FtotalforFav:totalforFav}
+    // let favtemp = {FVRT:favorder}
+    favtemp1=JSON.stringify(favorder)
+    localStorage.setItem("FVRT",favtemp1);
+}       
+
+
+
+function Getfavourites(){
+    const sladult = document.getElementById("sladult"); 
+    const slchild = document.getElementById("slchild"); 
+    const fradult = document.getElementById("fradult"); 
+    const frchild = document.getElementById("frchild"); 
+
+
+    let getfav=localStorage.getItem("FVRT",favtemp1)
+    let getfav2=JSON.parse(getfav)
+    console.log(typeof(getfav2["Fsladult"]))
+    console.log(getfav2["Fsladult"])
+    let SAD=getfav2["Fsladult"]
+    let SCH=getfav2["Fslchild"]
+    let FAD= getfav2["Ffrladult"]
+    let FCH=getfav2["Ffrchild"]
+    sladult.setAttribute("value",SAD)
+    slchild.setAttribute("value",SCH)
+    fradult.setAttribute("value",FAD)
+    frchild.setAttribute("value",FCH)
+
+}
 
 
 
@@ -350,59 +348,3 @@ function resetPurchaseForm(){
 
 
 
-//————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-
-
-
-// booking={locAdult:0, locChild:0,forAdult:0,forChild:0,dur:"0",Cost:0,bookNum:0 }
-// function getOption() {
-//     timeChoice = document.querySelector('#time');
-//     output = selectElement.value;
-//     document.querySelector('.output').textContent = output;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let outArray=[];
-
-// summary.addEventListener("click",summary);
-
-// function summary(){
-//     for (let i=0;i<=count;i++){
-//         summary.innerText=`  localAdult: ${(array[i].locAdult).value}  , localChild: ${(array[i].locChild).value} ,   forAdult:  ${(array[i].forAdult).value}  ,  forchild: ${(array[i].forChild).value} \n  `
-//     }
-    
-// }
-
-// btnAdd.addEventListener("click",AddToOrder);
- 
-// function AddToOrder(evt){
-//     totalCost=( parseInt(sladult.value) *1200) +(parseInt(slchild.value) * 700) + (parseInt(fradult.value) * 5500) +(parseInt(frchild.value) *2700)+ timeCost;
-//     console.log(totalCost)
-//     timeChoice.forEach(item=>item.addEventListener("change", durationCosting));
-
-//     evt.preventDefault();
-//     let Arrival=(date.value)
-//     if (theForm.checkValidity()){
-//         let fullName= `Order name ${fname.value} ${lname.value}`
-//          txtOutput.innerText=`Your order:\n :${fullName} \n Order Email:${email.value} \n Arrival date ${Arrival} \n Total Cost ${totalCost} `;
-//     }
-// }

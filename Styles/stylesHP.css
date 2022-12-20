@@ -6,7 +6,7 @@ p{
     color: whitesmoke;
     padding: 50px;
     width: auto;
-    background-image: url("/fernandonaime.github.io/Images/1.Homepage/MainPhoto.webp");
+    background-image: url(/Images/1.Homepage/MainPhoto.webp);
     background-size: 10%;
     background-repeat: no-repeat;
     background-size: cover;

@@ -147,7 +147,7 @@ nav ul li a{
 /* -----------------------------------------------------------------------------------------------BODY- */
 body {
 	padding: 0;
-	background-image:url("/fernandonaime.github.io/Images/Background.webp")  ;
+	background-image:url(/Images/Background.webp)  ;
 }
 h1, h2{
     text-align: center;

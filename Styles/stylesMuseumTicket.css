@@ -120,4 +120,11 @@ button:hover {
     border-radius: 4px;
     cursor: pointer;
   }
- 
+ #SubButtons{
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin:2px; */
+  margin-bottom: 2px;
+
+ }
