@@ -143,10 +143,10 @@ for (let i = 0; i < paymentMethodFields.length; i++) {
     break;
   }
 }
-if (!paymentMethodSelected) {
-  alert("Please select a payment method");
-  isValid = false;
-}
+// if (!paymentMethodSelected) {
+//   alert("Please select a payment method");
+//   isValid = false;
+// }
 if (!cardNumberRegex.test(cardNumberField.value)) {
   alert("Please enter a valid card number");
   isValid = false;
